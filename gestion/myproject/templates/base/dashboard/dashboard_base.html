@@ -47,9 +47,6 @@
       <li class="nav-item d-none d-sm-inline-block">
         <a href="{% url 'projetapp:home' %}" class="nav-link">Home</a>
       </li>
-      <li class="nav-item d-none d-sm-inline-block">
-        <a href="#" class="nav-link">Contact</a>
-      </li>
     </ul>
 
     <!-- SEARCH FORM -->
@@ -163,10 +160,10 @@
   <!-- Main Sidebar Container -->
   <aside class="main-sidebar sidebar-dark-primary elevation-4">
     <!-- Brand Logo -->
-    <a href="index3.html" class="brand-link">
+    <a href="{% url 'projetapp:home' %}" class="brand-link">
       <img src="/static/dashboard/dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3"
            style="opacity: .8">
-      <span class="brand-text font-weight-light">AdminLTE 3</span>
+      <span class="brand-text font-weight-light">NaN Projet</span>
     </a>
 
     <!-- Sidebar -->
@@ -177,7 +174,7 @@
           <img src="/static/dashboard/dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
         </div>
         <div class="info">
-          <a href="#" class="d-block">Alexander Pierce</a>
+          <a href="{% url 'projetapp:detailuser' %}" class="d-block">Alexander Pierce</a>
         </div>
       </div>
 
@@ -196,7 +193,7 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="./index.html" class="nav-link active">
+                <a href="{% url 'projetapp:home' %}" class="nav-link active">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Dashboard</p>
                 </a>
@@ -223,12 +220,6 @@
                     <a href="{% url 'projetapp:list_user' %}" class="nav-link">
                         <i class="far fa-circle nav-icon"></i>
                         <p> Users</p>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a href="pages/layout/top-nav.html" class="nav-link">
-                        <i class="far fa-circle nav-icon"></i>
-                        <p>Top Navigation</p>
                     </a>
                 </li>
             </ul>
@@ -299,6 +290,34 @@
 <script src="/static/dashboard/dist/js/pages/dashboard.js"></script>
 <!-- AdminLTE for demo purposes -->
 <script src="/static/dashboard/dist/js/demo.js"></script>
+<script src="/static/dashboard/echarts.min.js"></script>
+<script type="text/javascript">
+  // based on prepared DOM, initialize echarts instance
+  var myChart = echarts.init(document.getElementById('main'));
+
+  // specify chart configuration item and data
+  var option = {
+      title: {
+          text: 'ECharts entry example'
+      },
+      tooltip: {},
+      legend: {
+          data:['Sales']
+      },
+      xAxis: {
+          data: ["shirt","cardign","chiffon shirt","pants","heels","socks"]
+      },
+      yAxis: {},
+      series: [{
+          name: 'Sales',
+          type: 'bar',
+          data: [5, 20, 36, 10, 10, 20]
+      }]
+  };
+
+  // use configuration item and data specified to show chart
+  myChart.setOption(option);
+</script>
 <script>
     $(function () {
         $("#example1").DataTable();
