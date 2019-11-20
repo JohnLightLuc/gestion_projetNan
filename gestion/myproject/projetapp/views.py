@@ -16,11 +16,13 @@ def detailuser(request):
 def myallprojets(request):
     return render(request, 'page/dashboard/myprojects.html')
 
-def myfinishprojets(request):
-    return render(request, 'page/dashboard/mesprojetstermines.html')
 
-def myencoursprojets(request):
-    return render(request, 'page/dashboard/mesprojencours.html')
+def mailbox(request):
+    return render(request, 'page/dashboard/mailbox.html')
+
+def newmail(request):
+    return render(request, 'page/dashboard/newmessage.html')
+
 
 def detailprojet(request):
     return render(request, 'page/dashboard/projetDetail.html')
