@@ -12,3 +12,12 @@ def list_user(request):
 
 def detailuser(request):
     return render(request, 'page/dashboard/detail_user.html')
+
+def myallprojets(request):
+    return render(request, 'page/dashboard/myprojects.html')
+
+def myfinishprojets(request):
+    return render(request, 'page/dashboard/mesprojetstermines.html')
+
+def myencoursprojets(request):
+    return render(request, 'page/dashboard/mesprojencours.html')

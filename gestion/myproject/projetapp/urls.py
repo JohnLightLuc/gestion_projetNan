@@ -25,7 +25,8 @@ urlpatterns = [
     path('users/', views.list_user, name='list_user'),
     path('detailuser/', views.detailuser, name='detailuser'),
     path('projets/', views.projet, name='projet'),
-   
-
+    path('myprojects/', views.myallprojets, name='myprojects'),
+    path('myfinishprojects/', views.myfinishprojets, name='finishprojects'),
+    path('curent_projects/', views.myencoursprojets, name='projet_en_cours'),
 ]
 
