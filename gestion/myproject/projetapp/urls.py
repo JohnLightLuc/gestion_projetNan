@@ -28,5 +28,6 @@ urlpatterns = [
     path('myprojects/', views.myallprojets, name='myprojects'),
     path('myfinishprojects/', views.myfinishprojets, name='finishprojects'),
     path('curent_projects/', views.myencoursprojets, name='projet_en_cours'),
+    path('connexion/', views.connexion, name='connexion'),
 ]
 

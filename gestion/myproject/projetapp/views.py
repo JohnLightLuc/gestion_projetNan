@@ -21,3 +21,9 @@ def myfinishprojets(request):
 
 def myencoursprojets(request):
     return render(request, 'page/dashboard/mesprojencours.html')
+
+def detailprojet(request):
+    return render(request, 'page/dashboard/projetDetail.html')
+
+def connexion(request):
+    return render(request, 'page/dashboard/connexion.html')
