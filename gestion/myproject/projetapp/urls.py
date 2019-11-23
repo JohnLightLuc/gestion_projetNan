@@ -22,6 +22,7 @@ app_name = 'projetapp'
 
 urlpatterns = [
     path('', views.home, name='home'),
+    path('add_project', views.addproject, 'new_project'),
     path('users/', views.list_user, name='list_user'),
     path('detailuser/', views.detailuser, name='detailuser'),
     path('projets/', views.projet, name='projet'),

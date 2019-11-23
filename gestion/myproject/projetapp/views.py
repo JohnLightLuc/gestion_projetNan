@@ -4,6 +4,9 @@ from django.shortcuts import render
 def home(request):
     return render(request, 'page/dashboard/dashboard.html')
 
+def addproject(request):
+    return render(request, 'page/dashboard/addproject.html')
+
 def projet(request):
     return render(request, 'page/dashboard/list_projet.html')
 
