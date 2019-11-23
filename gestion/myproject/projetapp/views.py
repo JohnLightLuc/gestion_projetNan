@@ -29,3 +29,6 @@ def detailprojet(request):
 
 def connexion(request):
     return render(request, 'page/dashboard/connexion.html')
+
+def adduser(request):
+    return render(request, 'page/dashboard/adduser.html')

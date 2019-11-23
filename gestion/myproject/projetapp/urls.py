@@ -30,5 +30,7 @@ urlpatterns = [
     path('new/', views.newmail, name='newmessage'),
     path('projet_detail/', views.detailprojet, name='projet_detail'),
     path('connexion/', views.connexion, name='connexion'),
+    path('add_user/', views.adduser, name='adduser'),
+
 ]
 
