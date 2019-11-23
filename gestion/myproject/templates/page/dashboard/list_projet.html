@@ -20,9 +20,16 @@
           </div><!-- /.container-fluid -->
         </div>
         <!-- /.content-header -->
-    
+        
+        
         <!-- Info boxes -->
         <div class="row" style="margin: 0px 20px">
+      
+            <div class="col-12">  
+              <a href='{% url "projetapp:new_project" %}' class="btn btn-info toastsDefaultInfo float-right"> Add project</a>
+            </div>
+            <br><br>
+  
           <a href="{% url 'projetapp:projet_detail' %}" class="col-12 col-sm-6 col-md-3">
               <div class="info-box">
                 <span class="info-box-icon bg-info elevation-1"><i class="fas fa-cog"></i></span>
@@ -85,7 +92,7 @@
                     </div>
                     <span class="progress-description">70% Increase en 10 jours</span>
                 </div>
-              </div>
+            </div>
               <!-- /.info-box -->
           </a>
           <!-- /.col -->

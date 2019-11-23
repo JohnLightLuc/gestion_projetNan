@@ -27,7 +27,7 @@
         <div class="col-md-6">
           <div class="card card-primary">
             <div class="card-header">
-              <h3 class="card-title">General</h3>
+              <h3 class="card-title">Projet</h3>
 
               <div class="card-tools">
                 <button type="button" class="btn btn-tool" data-card-widget="collapse" data-toggle="tooltip" title="Collapse">
@@ -36,35 +36,79 @@
             </div>
             <div class="card-body">
               <div class="form-group">
-                <label for="inputName">Project Name</label>
+                <label for="inputName">Nom du projet</label>
                 <input type="text" id="inputName" class="form-control">
               </div>
               <div class="form-group">
-                <label for="inputDescription">Project Description</label>
+                <label for="inputDescription"> Description</label>
                 <textarea id="inputDescription" class="form-control" rows="4"></textarea>
               </div>
+            
               <div class="form-group">
-                <label for="inputStatus">Status</label>
-                <select class="form-control custom-select">
-                  <option selected disabled>Select one</option>
-                  <option>On Hold</option>
-                  <option>Canceled</option>
-                  <option>Success</option>
-                </select>
-              </div>
-              <div class="form-group">
-                <label for="inputClientCompany">Client Company</label>
+                <label for="inputClientCompany">Entreprise Cliente </label>
                 <input type="text" id="inputClientCompany" class="form-control">
               </div>
               <div class="form-group">
-                <label for="inputProjectLeader">Project Leader</label>
+                <label for="inputProjectLeader">Chef de Pojet</label>
                 <input type="text" id="inputProjectLeader" class="form-control">
               </div>
             </div>
             <!-- /.card-body -->
           </div>
           <!-- /.card -->
+          <div class="card card-default">
+            <div class="card-header">
+              <h3 class="card-title">Participants</h3>
+
+              <div class="card-tools">
+                <button type="button" class="btn btn-tool" data-card-widget="collapse"><i class="fas fa-minus"></i></button>
+                <button type="button" class="btn btn-tool" data-card-widget="remove"><i class="fas fa-remove"></i></button>
+              </div>
+            </div>
+            <!-- /.card-header -->
+            <div class="card-body">
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label>Chef de projet</label>
+                    <select class="form-control select2bs4" style="width: 100%;">
+                      <option selected="selected">Alabama</option>
+                      <option>Alaska</option>
+                      <option>California</option>
+                      <option>Delaware</option>
+                      <option>Tennessee</option>
+                      <option>Texas</option>
+                      <option>Washington</option>
+                    </select>
+                  </div>
+                
+                </div>
+                <!-- /.col -->
+                <div class="col-md-6">
+
+                  <div class="form-group">
+                    <label>Multiple</label>
+                    <select class="duallistbox" multiple="multiple">
+                      <option selected>Alabama</option>
+                      <option>Alaska</o ption>
+                      <option>California</option>
+                      <option>Delaware</option>
+                      <option>Tennessee</option>
+                      <option>Texas</option>
+                      <option>Washington</option>
+                    </select>
+                  </div>
+                
+                </div>
+                <!-- /.col -->
+              </div>
+              <!-- /.row -->
+            </div>
+           
+          </div>
+          <!-- /.card -->
         </div>
+
         <div class="col-md-6">
           <div class="card card-secondary">
             <div class="card-header">
@@ -77,21 +121,47 @@
             </div>
             <div class="card-body">
               <div class="form-group">
-                <label for="inputEstimatedBudget">Estimated budget</label>
+                <label for="inputEstimatedBudget">Estimation du budget</label>
                 <input type="number" id="inputEstimatedBudget" class="form-control">
               </div>
               <div class="form-group">
-                <label for="inputSpentBudget">Total amount spent</label>
+                <label for="inputSpentBudget">Total depenses</label>
                 <input type="number" id="inputSpentBudget" class="form-control">
               </div>
               <div class="form-group">
-                <label for="inputEstimatedDuration">Estimated project duration</label>
+                <label for="inputEstimatedDuration">Estimation de la durée du projet</label>
                 <input type="number" id="inputEstimatedDuration" class="form-control">
               </div>
             </div>
             <!-- /.card-body -->
           </div>
           <!-- /.card -->
+          <div class="card card-secondary">
+            <div class="card-header">
+              <h3 class="card-title">Periode</h3>
+
+              <div class="card-tools">
+                <button type="button" class="btn btn-tool" data-card-widget="collapse" data-toggle="tooltip" title="Collapse">
+                  <i class="fas fa-minus"></i></button>
+              </div>
+            </div>
+            <div class="card-body">
+              <div class="form-group">
+                <label for="datedebut">Date de debut</label>
+                <input type="date" id="datedebut" class="form-control">
+              </div>
+              <div class="form-group">
+                <label for="datedefin">Date de Fin</label>
+                <input type="date" id="datedefin" class="form-control">
+              </div>
+            
+              <div class="form-group">
+                <label for="inputEstimatedDuration">Estimation de la durée du projet</label>
+                <input type="number" id="inputEstimatedDuration" class="form-control">
+              </div>
+            </div>
+            <!-- /.card-body -->
+          </div>
         </div>
       </div>
       <div class="row">
@@ -103,6 +173,14 @@
     </section>
     <!-- /.content -->
   </div>
+  <link href="https://cdn.jsdelivr.net/npm/select2@4.0.12/dist/css/select2.min.css" rel="stylesheet" />
+  <script src="https://cdn.jsdelivr.net/npm/select2@4.0.12/dist/js/select2.min.js"></script>
+
+  <script>
+    $(document).ready(function() {
+        $('.js-example-basic-multiple').select2();
+    });
+  </script>
   <!-- /.content-wrapper -->
 
   {% endblock %}

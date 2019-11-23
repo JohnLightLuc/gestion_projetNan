@@ -4,6 +4,9 @@ from django.shortcuts import render
 def home(request):
     return render(request, 'page/dashboard/dashboard.html')
 
+def commits(request):
+    return render(request, 'page/dashboard/commits.html')
+
 def addproject(request):
     return render(request, 'page/dashboard/addproject.html')
 
@@ -33,5 +36,9 @@ def detailprojet(request):
 def connexion(request):
     return render(request, 'page/dashboard/connexion.html')
 
+def mescommits(request):
+    return render(request, 'page/dashboard/mescommits.html')
+
 def adduser(request):
     return render(request, 'page/dashboard/adduser.html')
+

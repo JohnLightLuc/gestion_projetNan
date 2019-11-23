@@ -22,7 +22,7 @@ app_name = 'projetapp'
 
 urlpatterns = [
     path('', views.home, name='home'),
-    path('add_project', views.addproject, 'new_project'),
+    path('add_project/', views.addproject, name='new_project'),
     path('users/', views.list_user, name='list_user'),
     path('detailuser/', views.detailuser, name='detailuser'),
     path('projets/', views.projet, name='projet'),
@@ -32,6 +32,8 @@ urlpatterns = [
     path('projet_detail/', views.detailprojet, name='projet_detail'),
     path('connexion/', views.connexion, name='connexion'),
     path('add_user/', views.adduser, name='adduser'),
+    path('commits/', views.commits, name='allcommit'),
+    path('my_commits/', views.mescommits, name='my_commits'),
 
 ]
 
